@@ -1,0 +1,48 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Impedance Tube Project
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Alireza
+    family-names: Same
+    email: alirezasame@gmail.com
+    affiliation: 'Sharif University of Technology, Physics Department'
+abstract: >-
+  The Impedance Tube Project introduces a comprehensive
+  full-stack application for precise impedance measurements,
+  integrating Rust for backend functionality and React for a
+  user-friendly web interface. This software system is
+  designed to support multi-platform deployment, ensuring
+  compatibility with both Windows and Linux environments.
+  The backend provides robust features for real-time
+  monitoring and configuration of audio devices, allowing
+  users to customize parameters such as frequency range,
+  sampling intervals, and strobe settings. Key backend
+  functionalities include data processing pipelines that
+  validate and aggregate data in real-time, producing
+  detailed reports in LaTeX with high-quality
+  visualizations. Additionally, data management is
+  streamlined through a structured directory hierarchy that
+  organizes per-frequency data and configuration files,
+  ultimately generating comprehensive multi-page data sheets
+  and summary reports. The frontend, developed with React
+  and enhanced by a design framework allows for intuitive
+  control over device setup, test monitoring, and result
+  validation, enabling seamless interaction with the
+  measurement hardware. This project serves as a versatile
+  tool for researchers and engineers, providing
+  customizable, efficient, and accurate impedance
+  measurement capabilities.
+keywords:
+  - Impedance Measurement
+  - Acoustic Testing
+  - Real-Time Data Processing
+  - Audio Device Monitoring
+  - Scientific Software
+  - Automated Measurement
+license: MIT

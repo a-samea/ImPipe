@@ -1,0 +1,19 @@
+# Cargo.toml
+
+[package]
+name = "impedance-tube-project"
+version = "0.1.0"
+edition = "2021"
+authors = ["Alireza Same <alirezasame@gmail.com>"]
+license = "MIT"
+description = "A comprehensive full-stack application for impedance measurement, featuring a Rust backend and a React frontend for real-time device monitoring, data processing, and PDF report generation."
+readme = "README.md"
+repository = "https://github.com/a-samea/ImPipe.git"
+homepage = "https://a-samea.github.io/impedance-tube-project"
+keywords = ["impedance", "measurement", "audio", "acoustic", "data-processing"]
+
+# Minimum Rust version
+rust-version = "1.60"
+
+# Dependencies for your project
+[dependencies]

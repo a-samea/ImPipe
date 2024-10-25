@@ -1,0 +1,50 @@
+# Rust build files
+/target/
+**/*.rs.bk
+
+# Rust specific files
+Cargo.lock
+Cargo.toml.orig
+
+# Node.js dependencies (React frontend)
+/web/node_modules/
+web/build/
+web/.cache
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# LaTeX output files
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.gz
+
+# Temporary files and directories
+*.tmp
+*.swp
+*.swo
+*.bak
+*.backup
+*.cache
+
+# IDE/project files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Build tools
+/build/
+*.o
+*.d
+*.obj
+*.so
+*.dll
+*.exe
+
+# TexLive installation (if installed locally within the project)
+/texlive/
