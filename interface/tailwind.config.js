@@ -1,0 +1,70 @@
+/** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
+
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,vue}'],
+  theme: {
+    extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: '#ffffff',
+      shark: {
+        50: '#f6f6f6',
+        100: '#e7e7e7',
+        200: '#d1d1d1',
+        300: '#b0b0b0',
+        400: '#888888',
+        500: '#6d6d6d',
+        600: '#5d5d5d',
+        700: '#4f4f4f',
+        800: '#454545',
+        900: '#3d3d3d',
+        950: '#212121',
+      },
+
+      rorange: {
+        DEFAULT: '#f97b22',
+        50: '#fff7ed',
+        100: '#ffedd5',
+        200: '#fed7aa',
+        300: '#fdbb74',
+        400: '#fb933c',
+        500: '#f97b22',
+        600: '#ea590c',
+        700: '#c2420c',
+        800: '#9a3512',
+        900: '#7c2d12',
+        950: '#431407',
+      },
+      cyan: {
+        50: '#effefd',
+        100: '#c8fffc',
+        200: '#90fff8',
+        300: '#51f7f4',
+        400: '#1de2e4',
+        500: '#05c2c7',
+        600: '#009aa1',
+        700: '#057980',
+        800: '#0a5f65',
+        900: '#0e4e53',
+        950: '#002f35',
+      },
+      yorange: {
+        50: '#fff8eb',
+        100: '#ffecc6',
+        200: '#ffd688',
+        300: '#ffbc4a',
+        400: '#ffa323',
+        500: '#f97d07',
+        600: '#dd5902',
+        700: '#b73a06',
+        800: '#942c0c',
+        900: '#7a250d',
+        950: '#461102',
+      },
+    },
+  },
+  plugins: [typography, forms],
+}
