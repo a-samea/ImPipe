@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { connectWebSocket, disconnectWebSocket } from '@/assets/websocket'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
@@ -19,12 +18,11 @@ export const useAuthStore = defineStore('auth', {
       this.isValid = pattern.test(this.apiKey)
     },
     async login(key: string): Promise<void> {
-      await connectWebSocket(key)
       this.setAPIKey(key)
       this.setLogState(true)
     },
     logout(): void {
-      disconnectWebSocket()
+      console.log('ridi')
       this.setAPIKey('')
       this.setLogState(false)
     },
