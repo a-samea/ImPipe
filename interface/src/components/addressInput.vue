@@ -12,7 +12,6 @@ const emit = defineEmits<{
 }>()
 
 const focused = ref(false)
-const showKey = ref(false)
 
 const updateValue = (event: Event) => {
   const target = event.target as HTMLInputElement
@@ -31,16 +30,16 @@ const updateValue = (event: Event) => {
             'text-blue-700': focused && !props.error,
             'text-red-600': props.error,
           }"
-          >key</span
+          >host</span
         >
       </div>
       <input
-        id="api-key"
-        :type="showKey ? 'text' : 'password'"
+        id="ip-address"
+        type="text"
         class="block w-full px-10 py-3 bg-bgray-100 border-1 rounded-lg font-mono text-bgray-950 focus:text-blue-700 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500 transition-colors duration-200 placeholder-transparent border-bgray-950 peer"
         @focus="focused = true"
         @blur="focused = false"
-        placeholder="API Key"
+        placeholder="IP Address"
         :class="{
           'border-red-600 focus:border-red-600 focus:ring-red-600/50 focus:text-red-600 text-red-600':
             props.error,
@@ -54,31 +53,15 @@ const updateValue = (event: Event) => {
             'text-blue-700': focused && !props.error,
             'text-red-600': props.error,
         }"
-        for="api-key"
-        >API Key</label
+        for="ip-address"
+        >IP Address</label
       >
-      <button
-        type="button"
-        @click="showKey = !showKey"
-        class="absolute inset-y-0 right-0 flex items-center px-3 focus:outline-none"
-      >
-        <span
-          class="mi text-xl transition-colors duration-200"
-          :class="{
-            'text-bgray-950': !focused && !props.error,
-            'text-blue-700': focused && !props.error,
-            'text-red-600': props.error,
-          }"
-        >
-          {{ showKey ? 'visibility' : 'visibility_off' }}
-        </span>
-      </button>
       <p
         v-if="props.error"
         class="absolute -top-1.5 right-2.5 text-sm text-red-600 font-sans flex items-center gap-1 transform scale-75 origin-top-right bg-bgray-100 px-2 z-20"
       >
         <span class="mi text-lg">error</span>
-        <span>Invalid Key</span>
+        <span>Invalid IP</span>
       </p>
     </div>
   </div>
