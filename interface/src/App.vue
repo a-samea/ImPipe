@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import NavBar from '@/components/navbar.vue'
-import SideRail from './components/siderail.vue'
+import NavBar from '@/components/NavBar.vue'
+import SideRail from '@/components/SideRail.vue'
 import { RouterView } from 'vue-router'
 </script>
 
@@ -15,7 +15,7 @@ import { RouterView } from 'vue-router'
       <SideRail />
 
       <!-- Main Content -->
-      <main class="bg-red-100 text-white p-4 h-full border-8 border-red-500">
+      <main class="p-2 h-full">
         <RouterView />
       </main>
     </div>
