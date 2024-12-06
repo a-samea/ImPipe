@@ -21,7 +21,7 @@ const updateValue = (event: Event) => {
 </script>
 
 <template>
-  <div class="w-52">
+  <div class="">
     <div class="relative">
       <div
         class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -51,7 +51,6 @@ const updateValue = (event: Event) => {
             props.error,
         }"
         @input="updateValue"
-        autofocus
       />
       <label
         class="absolute text-sm duration-200 transform -translate-y-4 scale-75 top-1.5 z-10 origin-[0] bg-transparent px-8 peer-[&:not(:placeholder-shown)]:bg-bgray-50 peer-[&:not(:placeholder-shown)]:px-2 peer-focus:bg-bgray-50 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:-translate-y-4 peer-focus:scale-75 start-2.5 pointer-events-none transition-all peer"

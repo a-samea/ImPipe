@@ -11,7 +11,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <button class="w-28 py-2 px-2 rounded-md flex items-center justify-start disabled:transform-none disabled:cursor-wait disabled:opacity-50 disabled:active:transform-none focus:outline-none"
+  <button class="min-w-24 py-2 px-2 rounded-md flex items-center justify-start disabled:transform-none disabled:cursor-wait disabled:opacity-50 disabled:active:transform-none focus:outline-none"
   type="button"
   :disabled="props.loading || false"
   @click="!props.loading && emit('click')"

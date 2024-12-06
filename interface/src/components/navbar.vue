@@ -3,7 +3,8 @@ import { ref } from 'vue';
 import { useAuthStore } from '@/stores/auth';
 import APIInput from '@/components/APIInput.vue';
 import AddressInput from '@/components/AddressInput.vue';
-import AuthButton from './AuthButton.vue';
+import AuthButton from '@/components/AuthButton.vue';
+import ServerStatus from '@/components/ServerStatus.vue';
 
 const authStore = useAuthStore();
 
@@ -20,12 +21,13 @@ const isLoggedIn = ref(false);
       <div class="flex items-center gap-3">
         <img src="/icon.png" alt="App Logo" class="w-9 h-9" />
         <span class="text-xl font-semibold text-accent-950">Impendace Tube</span>
+        <ServerStatus :connected="!true" :live="!true"/>
       </div>
       <div class="flex items-center gap-2">
 
         <AddressInput v-model:modelValue="apikey" :error="inputError" :disabled="!true"/>
         <APIInput v-model:modelValue="apikey" :error="inputError" :disabled="!true"/>
-        <AuthButton :loading="loading" @click="console.log('salam')" :loggedIn="isLoggedIn"/>
+        <AuthButton :loading="loading" @click="console.log('salam')" :loggedIn="!isLoggedIn"/>
       </div>
     </nav>
   </header>
