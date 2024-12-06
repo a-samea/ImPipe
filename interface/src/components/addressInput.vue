@@ -36,7 +36,7 @@ const updateValue = (event: Event) => {
       <input
         id="ip-address"
         type="text"
-        class="block w-full px-10 py-3 bg-bgray-100 border-1 rounded-lg font-mono text-bgray-950 focus:text-blue-700 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500 transition-colors duration-200 placeholder-transparent border-bgray-950 peer"
+        class="block w-full px-10 py-3 bg-bgray-100 border-1 rounded-lg font-sans text-bgray-950 focus:text-blue-700 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500 transition-colors duration-200 placeholder-transparent border-bgray-950 peer"
         @focus="focused = true"
         @blur="focused = false"
         placeholder="IP Address"
@@ -45,6 +45,7 @@ const updateValue = (event: Event) => {
             props.error,
         }"
         @input="updateValue"
+        autofocus
       />
       <label
         class="absolute text-sm duration-200 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-9 peer-[&:not(:placeholder-shown)]:bg-bgray-100 peer-[&:not(:placeholder-shown)]:px-2 peer-focus:bg-bgray-100 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 start-2.5 pointer-events-none transition-all peer"

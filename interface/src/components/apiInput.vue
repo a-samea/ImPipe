@@ -61,6 +61,7 @@ const updateValue = (event: Event) => {
         type="button"
         @click="showKey = !showKey"
         class="absolute inset-y-0 right-0 flex items-center px-3 focus:outline-none"
+        tabindex="-1"
       >
         <span
           class="mi text-xl transition-colors duration-200"
