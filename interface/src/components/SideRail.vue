@@ -1,29 +1,44 @@
 <script lang="ts" setup>
+const navItems = [
+  { icon: 'home', label: 'Home', route: '/' },
+  { icon: 'search', label: 'Search', route: '/search' },
+  { icon: 'notifications', label: 'Notifications', route: '/notifications' },
+  { icon: 'settings', label: 'Settings', route: '/settings' },
+]
 
+const bottomItems = [
+  { icon: 'logout', label: 'Logout', route: '/logout' }
+]
 </script>
 
 
 <template>
-  <aside class="fixed left-0 top-0 z-40 h-screen w-16 border-r border-gray-200 bg-white shadow-sm">
-    <nav class="flex h-full flex-col items-center justify-between py-4">
-      <!-- Top Section -->
-      <div class="flex flex-col items-center gap-4">
-        <a href="#" class="flex h-16 w-16 flex-col items-center justify-center gap-1 hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-          </svg>
-          <small class="text-xs font-medium">Home</small>
-        </a>
+  <aside class="h-full z-40 items-center flex  mx-2">
+    <nav class="flex flex-col gap-2 p-2.5 bg-bgray-50 backdrop-blur-lg border border-bgray-200 rounded-xl shadow-lg min-w-[72px]">
+      <!-- Top Navigation Items -->
+      <div class="flex flex-col gap-2">
+        <button
+          v-for="item in navItems"
+          :key="item.icon"
+          class="group relative flex flex-col items-center justify-center w-16 min-h-[48px] rounded-lg hover:bg-blue-50 active:bg-blue-100 transition-all duration-200"
+        >
+          <span class="mi text-xl text-gray-700 group-hover:text-blue-600">{{ item.icon }}</span>
+          <small class="text-xs font-medium text-gray-600 group-hover:text-blue-600">{{ item.label }}</small>
+        </button>
       </div>
 
-      <!-- Bottom Section -->
-      <div class="flex flex-col items-center gap-4">
-        <a href="#" class="flex h-16 w-16 flex-col items-center justify-center gap-1 hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <small class="text-xs font-medium">Settings</small>
-        </a>
+      <hr class="border-gray-200 mx-2" />
+
+      <!-- Bottom Navigation Items -->
+      <div class="flex flex-col gap-2">
+        <button
+          v-for="item in bottomItems"
+          :key="item.icon"
+          class="group relative flex flex-col items-center justify-center w-16 min-h-[48px] rounded-lg hover:bg-blue-50 active:bg-blue-100 transition-all duration-200"
+        >
+          <span class="mi text-xl text-gray-700 group-hover:text-blue-600">{{ item.icon }}</span>
+          <small class="text-xs font-medium text-gray-600 group-hover:text-blue-600">{{ item.label }}</small>
+        </button>
       </div>
     </nav>
   </aside>

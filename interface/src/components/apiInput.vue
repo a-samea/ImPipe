@@ -21,9 +21,9 @@ const updateValue = (event: Event) => {
 </script>
 
 <template>
-  <div>
+  <div class="w-52">
     <div class="relative">
-      <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <span
           class="mi text-xl transition-colors duration-200"
           :class="{
@@ -37,7 +37,7 @@ const updateValue = (event: Event) => {
       <input
         id="api-key"
         :type="showKey ? 'text' : 'password'"
-        class="block w-full px-10 py-3 bg-bgray-100 border-1 rounded-lg font-mono text-bgray-950 focus:text-blue-700 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500 transition-colors duration-200 placeholder-transparent border-bgray-950 peer"
+        class="block w-full px-9 py-2.5 bg-bgray-50 border-1 rounded-lg font-mono text-bgray-950 focus:text-blue-700 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500/50 focus:border-blue-500 transition-colors duration-200 placeholder-transparent border-bgray-950 peer"
         @focus="focused = true"
         @blur="focused = false"
         placeholder="API Key"
@@ -48,7 +48,7 @@ const updateValue = (event: Event) => {
         @input="updateValue"
       />
       <label
-        class="absolute text-sm duration-200 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-transparent px-9 peer-[&:not(:placeholder-shown)]:bg-bgray-100 peer-[&:not(:placeholder-shown)]:px-2 peer-focus:bg-bgray-100 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 start-2.5 pointer-events-none transition-all peer"
+        class="absolute text-sm duration-200 transform -translate-y-4 scale-75 top-1.5 z-10 origin-[0] bg-transparent px-8 peer-[&:not(:placeholder-shown)]:bg-bgray-50 peer-[&:not(:placeholder-shown)]:px-2 peer-focus:bg-bgray-50 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:-translate-y-4 peer-focus:scale-75 start-2.5 pointer-events-none transition-all peer"
         :class="{
             'text-bgray-950': !focused && !props.error,
             'text-blue-700': focused && !props.error,
@@ -60,7 +60,7 @@ const updateValue = (event: Event) => {
       <button
         type="button"
         @click="showKey = !showKey"
-        class="absolute inset-y-0 right-0 flex items-center px-3 focus:outline-none"
+        class="absolute inset-y-0 right-0 flex items-center px-2.5 focus:outline-none"
         tabindex="-1"
       >
         <span
@@ -76,9 +76,9 @@ const updateValue = (event: Event) => {
       </button>
       <p
         v-if="props.error"
-        class="absolute -top-1.5 right-2.5 text-sm text-red-600 font-sans flex items-center gap-1 transform scale-75 origin-top-right bg-bgray-100 px-2 z-20"
+        class="absolute -top-2 right-2.5 text-sm text-red-600 font-sans flex items-center gap-1 transform scale-75 origin-top-right bg-bgray-50 px-2 z-20"
       >
-        <span class="mi text-lg">error</span>
+        <span class="mi text-xl">error</span>
         <span>Invalid Key</span>
       </p>
     </div>

@@ -27,7 +27,7 @@ const loginHandler = async () => {
 </script>
 
 <template>
-  <div class="flex justify-center items-center h-screen">
+  <div class="flex justify-center items-center h-full">
     <form
       class="border-blue-600 border shadow-sm shadow-gray-950 rounded-xl px-8 pt-6 pb-4 w-full max-w-md "
       @submit.prevent="loginHandler"
