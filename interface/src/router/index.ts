@@ -41,7 +41,7 @@ const router = createRouter({
     {
       path: '/help',
       component: HelpView,
-      meta: { requieresAuth: true },
+      meta: { requieresAuth: false },
     },
     {
       path: '/500',

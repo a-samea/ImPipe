@@ -8,7 +8,7 @@ export const useConnectionStore = defineStore('connection', () => {
   const API_KEY_INPUT = ref('')
   const isIPInvalid = ref(false)
   const isApiKeyInvalid = ref(false)
-  const isConnected = ref(true)
+  const isConnected = ref(!true)
   const isLoading = ref(false)
   const isWaiting = ref(false)
 

@@ -2,6 +2,7 @@
 <script lang="ts" setup>
 import { useConnectionStore } from '@/stores/connectionStore'
 const connectionStore = useConnectionStore()
+import { RouterLink } from 'vue-router'
 
 import APIInput from '@/components/APIInput.vue'
 import AddressInput from '@/components/AddressInput.vue'
@@ -13,10 +14,12 @@ import ServerStatus from '@/components/ServerStatus.vue'
   <header class="z-50 h-16 border-b border-bgray-200 bg-bgray-50 shadow-sm">
     <nav class="flex h-full items-center justify-between px-4">
       <div class="flex items-center gap-3">
-        <img src="/icon.png" alt="App Logo" class="w-9 h-9" />
-        <span class="text-xl font-semibold text-accent-950 align-baseline"
-          >Impendace Tube</span
-        >
+        <RouterLink to="/" class="flex items-center gap-3">
+          <img src="/icon.png" alt="App Logo" class="w-9 h-9" />
+          <span class="text-xl font-semibold text-accent-950 align-baseline"
+            >Impendace Tube</span
+          >
+        </RouterLink>
         <ServerStatus
           :connected="connectionStore.isConnected"
           :live="!connectionStore.isWaiting"
