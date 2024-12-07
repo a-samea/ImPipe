@@ -3,14 +3,14 @@
 
 <script lang="ts" setup>
 const navItems = [
-  { icon: 'home', label: 'Home', route: '/' },
-  { icon: 'search', label: 'Search', route: '/search' },
-  { icon: 'notifications', label: 'Notifications', route: '/notifications' },
+  { icon: 'home', label: 'Setup', route: '/' },
+  { icon: 'search', label: 'Run', route: '/search' },
+  { icon: 'notifications', label: 'Results', route: '/notifications' },
   { icon: 'settings', label: 'Settings', route: '/settings' },
 ]
 
 const bottomItems = [
-  { icon: 'logout', label: 'Logout', route: '/logout' }
+  { icon: 'logout', label: 'Help', route: '/logout' }
 ]
 </script>
 
