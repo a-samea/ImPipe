@@ -36,14 +36,26 @@ const toastStore = useToastStore()
       >
       <span class="mi text-red-600 text-2xl" v-else>error</span>
 
-      <div class="ms-2 text-sm font-normal flex-1 break-words line-clamp-2">
-        {{ toast.message }}
+      <div
+        class="ms-2 text-sm font-normal flex-1 break-words line-clamp-2 relative group"
+        :title="'Open Console - ' + toast.message"
+      >
+        <span
+          class="font-mono text-xs text-bgray-50 rounded-md px-1"
+          :class="{
+            'bg-green-500': toast.type === 'success',
+            'bg-gold-500': toast.type === 'warning',
+            'bg-red-500': toast.type === 'error',
+          }"
+          >{{ toast.code }}</span
+        ><span class="ms-2">{{ toast.label }}: {{ toast.message }}</span>
+
       </div>
       <button
         type="button"
         @click="toastStore.removeToast(toast.id)"
         class="ms-2 p-0.5 -mt-0.5 -mb-2 inline-flex items-center justify-center size-7 relative"
-        >
+      >
         <span
           class="mi text-sm absolute"
           :class="{

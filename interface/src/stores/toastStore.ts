@@ -2,8 +2,10 @@ import { defineStore } from 'pinia'
 
 interface Toast {
   id: string
-  message: string
+  label: string
+  message?: string
   type: 'success' | 'warning' | 'error'
+  code: number
   duration?: number
   percentage: number
 }
@@ -19,6 +21,10 @@ export const useToastStore = defineStore('toast', {
       const percentage = toast.duration && toast.duration > 0 ? 100 : 0
 
       this.toasts.push({ ...toast, id, percentage })
+
+      const message = toast.message || 'You are on your own'
+      const time = new Date().toLocaleTimeString()
+      console.log(`[${time}] - ${toast.code} - ${toast.label}: ${message}`)
 
       if (toast.duration && toast.duration > 0) {
         const startTime = Date.now()

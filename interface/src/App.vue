@@ -6,17 +6,9 @@ import ToastContainer from '@/components/ToastContainer.vue'
 
 
 import { useToast } from '@/composables/useToast'
-
 const toast = useToast()
+toast.success( 200,'Hello', 'Welcome to the app', 2000)
 
-// Show success toast
-toast.success('Operation completed! sdgdfgdfgdgfdg dffgdfgdfgfd  dfgrgdffgedt dghdffgadghyfhfgb sthdfgatrhb stgertgdrg')
-
-// Show warning toast that stays longer
-toast.warning('Connection unstable', 5000)
-
-// Show error toast that doesn't auto-dismiss
-toast.error('Failed to connect', 3000)
 </script>
 
 <template>
