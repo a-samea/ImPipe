@@ -6,6 +6,4 @@
 //! where necessary.
 
 fn main() {
-    let message = Message {text: String::from("Hello, world!")}.text;
-    println!("{}",message);
 }
