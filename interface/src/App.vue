@@ -6,7 +6,7 @@ import ToastContainer from '@/components/ToastContainer.vue'
 
 import { useToast } from '@/composables/useToast'
 const toast = useToast()
-toast.success(200, 'Hello', 'Welcome to the app', 2000)
+toast.success(200, 'Hello', 'Hello to the interface!', 2000)
 </script>
 
 <template>
